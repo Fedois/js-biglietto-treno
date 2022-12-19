@@ -6,22 +6,29 @@ console.log('km: ', kilometri)
 const età = prompt('quanti anni hai?');
 console.log('età: ', età);
 
-let prezzokm = (kilometri * 0.21);
+let prezzokm = (kilometri * 0.21) .toFixed(2);
+console.log('prezzo ticket: ', prezzokm + '€');
 
 if(età < 18){
     alert('avrai uno sconto del 20%');
     
-    totaleUno = ((prezzokm / 100) * 20) .toFixed(2);
-    console.log('prezzo finale: ', totaleUno);
+    let calcUno = ((prezzokm / 100) * 20) .toFixed(2);
+    console.log('sconto 20%: ', calcUno + '€');
 
-    document.getElementById('prezzo').innerHTML = totaleUno;
+    let totaleUno = (prezzokm - calcUno) .toFixed(2);
+    console.log('prezzo finale: ', totaleUno + '€')
+    
+    document.getElementById('prezzo').innerHTML = totaleUno + '€';
 
 }
 else if(età >= 65){
     alert ('avrai uno sconto del 40%');
     
-    let totaleDue = ((prezzokm / 100) * 40) .toFixed(2);
-    console.log('prezzo finale: ', totaleDue); 
+    let calcDue = ((prezzokm / 100) * 40) .toFixed(2);
+    console.log('sconto 40%: ', calcDue + '€'); 
 
-    document.getElementById('prezzo').innerHTML = totaleDue; 
+    let totaleDue = (prezzokm - calcDue) .toFixed(2);
+    console.log('prezzo finale: ', totaleDue + '€')
+
+    document.getElementById('prezzo').innerHTML = totaleDue + '€'; 
 }
