@@ -32,3 +32,6 @@ else if(età >= 65){
 
     document.getElementById('prezzo').innerHTML = totaleDue + '€'; 
 }
+else{
+    document.getElementById('prezzo').innerHTML = prezzokm + '€';
+}
