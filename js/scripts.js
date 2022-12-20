@@ -3,7 +3,7 @@ alert('clicca su "ok" per il fare il calcolo prezzo biglietto del treno')
 let kilometri = parseInt(prompt('quanti kilometri vuoi percorrere?'));
 console.log('km: ', kilometri)
 
-const età = prompt('quanti anni hai?');
+const età = parseInt(prompt('quanti anni hai?'));
 console.log('età: ', età);
 
 let prezzokm = (kilometri * 0.21).toFixed(2);
@@ -15,7 +15,7 @@ if(età < 18){
     let calcUno = ((prezzokm / 100) * 20).toFixed(2);
     console.log('sconto 20%: ', calcUno + '€');
 
-    let totaleUno = (prezzokm - calcUno) .toFixed(2);
+    let totaleUno = (prezzokm - calcUno).toFixed(2);
     console.log('prezzo finale: ', totaleUno + '€')
     
     document.getElementById('prezzo').innerHTML = totaleUno + '€';
